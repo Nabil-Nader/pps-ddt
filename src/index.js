@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import * as serviceWorker from './serviceWorker';
+
+import UserSignupPage from './pages/UserSignupPage';
+import * as apiCalls from './api/apiCalls'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const actions = {
+    postSignup:apiCalls.signup
+}
+
 root.render(
   <React.StrictMode>
-    <App />
+    <UserSignupPage actions={actions} />
   </React.StrictMode>
 );
 
